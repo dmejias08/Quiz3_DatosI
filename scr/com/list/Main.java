@@ -6,13 +6,6 @@ public class Main {
         Queue queue = new Queue();
 
         //Creating queue
-        queue.enqueue(11);
-        queue.enqueue(12);
-        queue.enqueue(23);
-        queue.enqueue(1);
-        queue.enqueue(34);
-        queue.enqueue(2);
-        queue.enqueue(8);
         queue.enqueue(4);
 
         // loop queue
@@ -30,8 +23,23 @@ public class Main {
         queue.enqueue(77);
 
 
-        
+        // loop queue
+        System.out.println("Recorro lista con los nuevos elementos");
+        queue.displayList();
+
+        //dequeue
+        System.out.println("Desencolando 3 elementos");
+        queue.dequeue();
+        queue.dequeue();
+        queue.dequeue();
+
+        //loop queue
+        System.out.println("Recorro lista final");
+        queue.displayList();
 
 
     }
 }
+// Se esperaba que al aplicar el método enqueue los elementos fuesen añadidos al final de la cola,
+// además cuando se aplica un dequeue el primer elemento de la cola fuese eliminado. También que al recorrer la lista
+// se impriman todos los elementos del queue en terminal. Concluyendo en que sí,  los resultados culminaron siendo los esperados.

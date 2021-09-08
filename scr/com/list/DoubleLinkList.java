@@ -22,16 +22,16 @@ public class DoubleLinkList {
     }
 
     public void insertLast(Object data){
-        if(this.head == null && this.tail == null) {
-            this.tail = new Node(data);
-        }else {
-            Node newNode = new Node(data); //crea nodo
-            this.tail.next = newNode;
-            newNode.previous = this.tail;// al siguiete le guarda el primero
-            newNode.next = null;
-            this.tail = newNode; // se guarda en la cabeza actual
-        }
+        Node newNode = new Node(data); //crea nodo
+        this.tail.next = newNode;
+        newNode.previous = this.tail;// al siguiete le guarda el primero
+        newNode.next = null;
+        this.tail = newNode; // se guarda en la cabeza actual
         this.size++;
+    }
+    public void insertFirst(Object data){
+        this.head = new Node(data);
+        this.tail = this.head;
     }
     public Node deleteFirst(){
         if (this.head != null){
